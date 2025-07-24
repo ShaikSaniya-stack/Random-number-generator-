@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Random Number Generator</title></head>
+<body>
+  <h3>Generate a Random Number</h3>
+  <input id="min" type="number" placeholder="Min value">
+  <input id="max" type="number" placeholder="Max value">
+  <button onclick="generate()">Generate</button>
+  <p id="output"></p>
+
+  <script>
+    function generate() {
+      let min = parseInt(document.getElementById("min").value);
+      let max = parseInt(document.getElementById("max").value);
+      let rand = Math.floor(Math.random() * (max - min + 1)) + min;
+      document.getElementById("output").innerText = "Random Number: " + rand;
+    }
+  </script>
+</body>
+</html>
